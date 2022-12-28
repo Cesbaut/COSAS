@@ -1,0 +1,45 @@
+//Introducir elementos de un vector con funciones
+
+#include<stdio.h>
+int valores();
+void vector(int z[], int i, int aux);
+int cual();
+void imprimir(int z[], int a2);
+
+int main(){
+	int y,i;
+	int aux;
+	int a2;
+
+	
+	aux=valores();
+	int v[aux];
+	vector (v,i,aux);
+	a2=cual();
+	imprimir(v,a2);
+	
+	return 0;
+}
+int valores(){
+	int x,u;
+	printf("¿Cuantos valores deseas guardar? ");
+	scanf("%i",&x);
+	u=x;
+	return u;
+	}
+void vector(int z[],int i, int aux){
+	for(i=1;i<=aux;i++){
+		printf("Ingresa un valor a guardar: ");
+		scanf("%i",&z[i]);
+	}
+}
+int cual(){
+	int t;
+	printf("Ingresa la posicion a buscar su valor: ");
+	scanf("%i",&t);
+	return t;
+}
+void imprimir(int z[], int a2){
+		printf("El valor que buscas es: %i.",z[a2]);
+}
+
